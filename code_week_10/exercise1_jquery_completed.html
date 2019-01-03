@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SVG using object tag</title>
+    <script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <object id="iso_1_obj" width="400px" type="image/svg+xml" data="svg/woman-306227.svg">Your browser does not support SVGs</object>
+
+    <script>
+        function setUp() {
+            var svgDocument = $("#iso_1_obj").contents();
+            var svgb1 = svgDocument.find("path").attr({"fill": "lime"});
+        };
+        $(window).load(setUp);
+
+        // window load is DIFFERENT from $(document).ready(setup)
+        // read more here http://stackoverflow.com/questions/8396407/jquery-what-are-differences-between-document-ready-and-window-load
+
+        /* OR fully function chained version of above with generic applicaiton to object tag rather specific ID*/
+
+        // $(window).load(function() {
+        //     $("object").contents().find("path").attr({
+        //         "fill": "lime"
+        //     });
+        // });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG circles</title>
+    <style>
+      .active {
+        fill:orange;
+        stroke:black;
+      }
+      .inactive {
+        fill:grey;
+        stroke:blue;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 id="mytitle">Rollover the SVG</h1>
+
+    <svg width="100" height="100">
+       <circle id="mycircle" class="inactive" cx="50" cy="50" r="40" stroke-width="4" onmouseover="setActive()" onmouseout="setInactive()"/>
+       Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <script>
+
+        function setActive(){
+          document.getElementById('mycircle').setAttribute('class','active')
+          document.getElementById('mytitle').innerHTML = "some new content"
+        }
+
+        function setInactive(){
+          document.getElementById('mycircle').setAttribute('class','inactive')
+          document.getElementById('mytitle').innerHTML = "Rollover the SVG"
+        }
+
+    </script>
+  </body>
+</html>

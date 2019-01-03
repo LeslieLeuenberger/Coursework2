@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SVG using object tag with hover</title>
+    <script src="js/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <object id="iso_1_obj" width="400px" type="image/svg+xml" data="svg/woman-306227.svg">Your browser does not support SVGs</object>
+    <object id="iso_2_obj" width="400px" type="image/svg+xml" data="svg/man-149724.svg">Your browser does not support SVGs</object>
+    <script>
+        function setUp() {
+
+            // if we select all objects on the page we can apply the hover handler to all of them at once
+            $("object").contents().find("path").hover(function() {
+                $(this).attr({
+                    "fill": "lime"
+                });
+                console.log(this.id + " in");
+            }, function() {
+                $(this).attr({
+                    "fill": "black"
+                });
+                console.log(this.id + " out");
+            });
+
+        };
+
+        $(window).load(setUp);
+    </script>
+</body>
+
+</html>
