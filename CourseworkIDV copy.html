@@ -234,18 +234,20 @@
 		bindto: '#chart',
 		data: {
 			columns: [
-			['16 - 19', 44],
-			['20 - 24', 24],
-			['25 - 34', 18],
-			['35 - 44', 10],
-			['45 - 51', 3],
-
-
+				['16 - 19', 44],
+				['20 - 24', 24],
+				['25 - 34', 18],
+				['35 - 44', 10],
+				['45 - 51', 3],
 			],
 			type : 'donut',
-			onclick: function (d, i) { console.log("onclick", d, i); },
-			onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-			onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+			colors: {
+        "16 - 19": '#ff0000',
+        data2: '#00ff00',
+        data3: '#0000ff',
+        data4: '#ff0000',
+        data5: '#ff0000'
+    	}
 		},
 		donut: {
 			title: "Age"
