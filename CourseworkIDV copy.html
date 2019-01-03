@@ -40,10 +40,6 @@
 		text-align:center;
 		font-size: 5;
 		height: 300px;
-
-
-
-
 	}
 
 
@@ -72,9 +68,6 @@
 			</div>
 
 
-
-
-
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
@@ -98,7 +91,7 @@
 
 				<article>
 					<p>
-						<p  class="dropcap">
+						<p class="dropcap">
 							Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
 							posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
 							sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing.
@@ -162,31 +155,6 @@
 
 						<div id="sexualoffensetypes"></div>
 
-
-
-
-
-
-
-						<!-- Contact -->
-						<!-- <section class="contact"> -->
-
-								<!-- <p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
-								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-								</ul>
-							</section> -->
-
-							<!-- Copyright -->
-							<!-- <div class="copyright">
-								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved.</li><li>Leslie Leuenberger</li>
-								</ul>
-							</div> -->
-
 						</article>
 
 
@@ -225,34 +193,34 @@
 						<script type="text/javascript" src="js/uikit-2.27.2/js/uikit.min.js"></script>
 
 
-						<script>
+		<script>
 
 
-	// PIE CHART------
+			// PIE CHART------
 
-	var chart = c3.generate({
-		bindto: '#chart',
-		data: {
-			columns: [
-				['16 - 19', 44],
-				['20 - 24', 24],
-				['25 - 34', 18],
-				['35 - 44', 10],
-				['45 - 51', 3],
-			],
-			type : 'donut',
-			colors: {
-        "16 - 19": '#ff0000',
-        data2: '#00ff00',
-        data3: '#0000ff',
-        data4: '#ff0000',
-        data5: '#ff0000'
-    	}
-		},
-		donut: {
-			title: "Age"
-		}
-	});
+			var chart = c3.generate({
+				bindto: '#chart',
+				data: {
+					columns: [
+						['16 - 19', 44],
+						['20 - 24', 24],
+						['25 - 34', 18],
+						['35 - 44', 10],
+						['45 - 51', 3],
+					],
+					type : 'donut',
+					colors: {
+		        "16 - 19": '#ff0000',
+		        data2: '#00ff00',
+		        data3: '#0000ff',
+		        data4: '#ff0000',
+		        data5: '#ff0000'
+		    	}
+				},
+				donut: {
+					title: "Age"
+				}
+			});
 
 			// BAR CHART 1---------
 
@@ -268,32 +236,7 @@
 
 					type: 'bar'
 				},
-
-
-
-				bar: {
-					width: {
-						ratio: 0.5
-					}
-
-				},
-
-				padding: {
-					top: -10,
-					right: 100,
-					bottom: 0,
-					left: 100,
-				},
-
-
-
-
-
 				axis: {
-
-
-
-
 					rotated: true,
 					x: {
 						type: 'category',
@@ -301,9 +244,7 @@
 				},
 			});
 
-
-
-			var chart = c3.generate({
+			var chartOutcome = c3.generate({
 				bindto: "#outcome",
 				data: {
 					x:'x',
@@ -315,56 +256,15 @@
 
 					type: 'bar'
 
+				},
 
-			// 		colors: {
-			// 		Evidential difficulties, victim does not support action: '#E15D1F',
-			// 		Evidential difficulties, suspect identified and victim supports action: '#177F90',
-			// 		Not yet assigned an outcome: '#A1D04A',
-			// 		Investigation complete, no suspect identified: '#A1D04A',
-			// 		Charged/Summonsed: '#A1D04A',
-			// 		Other: '#A1D04A',
-			// 		Prosecution prevented or not the interest: '#A1D04A',
-			// 		'Out of court': '#A1D04A',
-			//
-			//
-			//
-			//
-			//
-			// },
-			// color: function (color, d) {
-			// 		// d will be 'id' when called for legends
-			// 		return d.id && d.id === 'outofcourt' ? d3.rgb(color).darker(d.value / 150) : color;
-			// };
-
-		},
-
-		bar: {
-			width: {
-				ratio: 0.5
-			},
-
-
-
-		},
-
-		padding: {
-			top: 0.1,
-			right: 100,
-			bottom: 0,
-			left: 100,
-		},
-
-		axis: {
-			rotated: true,
-			x: {
-				type: 'category',
-
-
-			}
-		},
-
-
-	});
+				axis: {
+					rotated: true,
+					x: {
+						type: 'category',
+					}
+				}
+			});
 
 			var chart = c3.generate({
 				bindto: '#sexualoffensetypes',
@@ -404,10 +304,6 @@
 							width: {
 										ratio: 0.5 // this makes bar width 50% of length between ticks
 									}
-
-
-
-
 								}
 							});
 
@@ -419,6 +315,7 @@
 				});
 			}, 20);
 
+			chartOutcome.resize({height:600})
 		</script>
 		<script>
 			function setUp() {
