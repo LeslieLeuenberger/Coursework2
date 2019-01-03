@@ -420,19 +420,11 @@
 		</script>
 		<script>
 			function setUp() {
-				console.log("andre");
-
-				$("object").contents().find("path").hover(function() {
-					$(this).attr({
-						"fill": "lime"
-					});
+				$("object").hover(function() {
 					console.log(this.id);
 					$('#info_display').text(this.id + " estimated to have been victims of sexual assault last year");
 
 				}, function() {
-					$(this).attr({
-						"fill": "black"
-					});
 					$('#info_display').text(this.id + " mouseover the shapes");
 				});
 			};
