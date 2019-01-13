@@ -1,0 +1,557 @@
+"<!DOCTYPE HTML>
+	<html>
+	<head>
+		<!-- Google Fonts Roboto and Lato-->
+
+		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+		<!-- I wasn't able to have the script tags all together, because these need to be in the head I believe -->
+		<script src="js/d3.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+
+
+
+		<title>Sexual Assault in England and Wales</title>
+		<!-- meta data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+<!-- CSS I added additional style elements -->
+	<style>
+
+	h1 {
+		font-family: 'Roboto';
+	}
+
+
+	h2 {font-family: 'Roboto', sans-serif; font-weight:bold;
+	}
+
+	h3 {font-family: 'Roboto', sans-serif; font-size: 10px;
+ }
+
+	article {
+		font-family:'Roboto';
+		margin: 0 auto;
+		width:600px;
+		text-align:justify;
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	.dropcap::first-letter{      /*I chose to add a drop cap because I like the style of the telegraph and Guardian news articles */
+		float: left;
+		font-size: 80px;
+		line-height: 1;
+		font-weight: bold;
+		margin-right: 15px;
+		font-family: "Georgia", serif;
+		color: black;
+	}
+	footer {
+		text-align:center;
+		font-size: 16;
+		height: 300px;
+	}
+
+/* This is for the size of the D3 bubble chart  */
+	.bubblesize{
+		max-height:800px;
+		max-width: 800px;
+	}
+
+/* This is code from github for also for the d3 bubble chart */
+	.bubbleChart {
+	      min-width: 600px;
+	      max-width: 600px;
+	      height: 500px;
+	      margin: 0 auto;
+	    }
+	    .bubbleChart svg{
+	      background: #white;
+	    }
+
+		.graphcaption {
+			text-align: right;
+			font-size: 13px;
+			color: grey;
+		}
+
+</style>
+
+<!-- Template, I didn't write the code and therefore don't understand it in detail but I get what it does.  This is for the Landing page. -->
+<body class="homepage is-preload">
+	<div id="page-wrapper">
+
+
+		<!-- Header -->
+		<div id="header">
+
+
+			<!-- First Page, Landing Page-->
+			<div class="inner">
+				<header>
+					<h1> Sexual Assault <br> By The Numbers   </h1>
+					<p>by Leslie Leuenberger</p>
+
+				</header>
+				<footer>
+					<a href="#banner" class="button circled scrolly">Read</a>
+				</footer>
+				<div class="graphcaption">Image: Oslo Women's March | GGAADD via Wikimedia Commons</div>
+			</div>
+
+
+			<!-- Navigation that isn't really a navigation anymore. I deleted these elements and instead it tells the other what kind of article it is -->
+			<nav id="nav">
+				<ul>
+					<li>Data-driven feature</li>
+				</nav>
+
+			</div>
+
+			<!-- This Part is from the Template
+			<! Banner -->
+			<section id="banner">
+				<header>
+					<h1><strong> The Harrowing Figures Of Sexual Assault </strong></h1>
+					<h2> In England and Wales, <strong>one in four</strong> women have been a victim of <br>sexual offending. Most cases don't enter the criminal justice system.</h2>
+				</section>
+
+
+				<!-- Here starts the main article -->
+
+				<article>
+
+						<p class="dropcap">
+							All began little over a year ago. The man who started the avalanche was none other than one of Hollywood's biggest names – Harvey Weinstein. On the 5th  October 2017 <a href="https://www.nytimes.com/2017/10/05/us/harvey-weinstein-harassment-allegations.html">the New York Times published an exposé detailing countless allegations</a> against the high-profile producer that shook the industry. At first it was just a handful of women who came forward, among them well-known actresses Ashley Judd and Rose McGowan. As the scandal unfolded more and more women opened up about their sexual harassment and assault experiences in Hollywood.
+						</p>
+						<p>
+							However, it was a single tweet that made an industry scandal evolve into a global discussion. Five days after the allegations were made public, actress Alyssa Milano suggested women who have been sexually harassed or assaulted should write 'Me too' as a status.
+						</p>
+
+						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you’ve been sexually harassed or assaulted write 'me too' as a reply to this tweet. <a href="https://t.co/k2oeCiUf9n">pic.twitter.com/k2oeCiUf9n</a></p>&mdash; Alyssa Milano (@Alyssa_Milano) <a href="https://twitter.com/Alyssa_Milano/status/919659438700670976?ref_src=twsrc%5Etfw">October 15, 2017</a></blockquote>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+						<p>
+							Half a million people responded in the first 24 hours. And within days, millions of personal stories began pouring in from women – and some men. Although the original creator of the movement is known to be African-American activist Tarana Burke who founded #metoo in 2006 to unite survivors of sexual violence, it is thanks to Milano the hashtag went viral. All of a sudden, men and women across the world started talking about an issue that has been hushed up for centuries. In the booming collective these voices became too loud to dismiss. The two seemingly simple words 'me too' morphed into a global byword.
+						</p>
+
+						<p>
+							Still, when we talk about sexual harassment, assault and abuse we have to face some uncomfortable truths: sexual harassment is deeply ingrained in our culture, affecting especially women from childhood, throughout their teenage years to adulthood. They encounter sexual harassment and discrimination in schools, at universities and at their workplace.
+						</p>
+
+						<img src="Women's_March_London_-_04_(32293144312).jpg" alt="Women's March London">
+						<div class="graphcaption">Women's March London (2017) | Image: Garry Knight via Wikimedia Commons</div>
+
+
+							<h2> Who are the victims? </h2>
+						<p>
+							In England and Wales, approximately 700,000 people (aged 16 to 59 years) are estimated to have been a victim of sexual assault from the year ending March 2016 to ending March 2018. This shows data from the Crime Survey for England and Wales (CSEW), released by the ONS last December. The majority of the victims are female. In fact, 561,000 are women and 143,000 are men.
+						</p>
+						<h3><strong> Sexual Offense Victims by Gender </strong></h3>
+							<div id="piechartgender"></div>
+							<div class="graphcaption">Data: CSEW | Chart: C3.js</div>
+						<p>
+							Moreover, the figures suggest that one in four women (24.4%) have experienced some type of sexual assault, once or more, between the age of 16 and 59. The perpetrator, almost exclusively, is male. These numbers emphasise the magnitude of the issue but we don’t need them for proof. It is rare to find a woman who hasn’t in some way experienced sexual assault and harassment. What is less talked about is the question, why do men sexually assault women?
+						</p>
+						<p>
+							In an <a href="https://www.psychologytoday.com/gb/blog/insight-therapy/201411/why-do-men-sexually-assault-women">article for Psychology Today UK</a> Noam Shpancer Ph. D explains it as follows:
+						</p>
+						<p>
+							"First, because they can. By genetic lot, men are on average stronger than women and can overpower them physically."
+						</p>
+
+						<p>
+							As a second and more controversial reason,  Shpancer suggests that male dominance and aggression in general is not only tolerated but subconsciously appreciated in our society." Acts of dominance and violence are common ways by which males attract and protect their mates among our primate relatives. In humans, male aggressiveness is often rewarded by greater access to, attention from, and success with women." The main argument that psychologists, feminists and others make is that sexual violence is primarily about power and control over another person.
+						</p>
+
+						<p>
+							According to the CSEW data, both men and women in younger age groups are more likely to experience sexual assault. Men and women from 16 to 19 make up almost half of the cases whereas age groups from 35 make up a low percentage (13%).
+						</p>
+						<h3> <strong>Sexual Offense Victims by Age (%) </strong> </h3>
+							<div id="age"></div>
+							<div class="graphcaption">Data: CSEW | Chart: C3.js</div>
+							<h2>Who are the perpetrators?</h2>
+						<p>
+							It is a widely believed myth that women are most likely raped outside, after dark, by a stranger. Figures show that only in 15% of rape and assault cases the perpetrator is someone the victim doesn’t know. In fact, in half the cases the partner or ex-partner of the victim is the perpetrator. The charity organisation Rape Crisis England and Wales confirms this:
+						</p>
+						<p>
+							"Around 90% of rapes are committed by known men, and often by someone who the survivor has  trusted or even loved. People are raped in their homes, their workplaces and other settings where they previously felt safe. Rapists can be friends, colleagues, clients, neighbours, family members, partners or exes. Risk of rape shouldn't be used as an excuse to control women's movements or restrict their rights and freedom."
+						</p>
+						<p>
+							When it comes to rape in a partnership, surveys show that there is no clarity about the definition of rape. A survey by YouGov from December revealed that almost a quarter of the participants think that sex without consent in long-term relationships does not count as rape. Also a third of men believe that a woman can’t change her mind after sex has started. However, the majority of participants that gave that answer were over 65 years old.
+						</p>
+						<h3> <strong>Victim-Offender Relationship For Rape Or Assault (%)</strong> </h3>
+							<div class="bubbleChart"></div>
+							<div class="bubblesize"></div>
+							<div class="graphcaption">Data: CSEW | <a href="http://phuonghuynh.github.io/javascript/d3js/2014/12/14/bubble-chart.html"> Chart: Phuong Huynh</a></div>
+
+							<p>
+								When looking at men and women individually, women are more likely to be assaulted and raped by their partner or ex-partner (46%) than men (25%). Men, however, are more likely to be raped by someone they go on a date with (21%) compared to women (8%). The numbers don’t say whether the victim-offender relationship is a homo- or heterosexual relationship.
+							</p>
+							<h2> The Nature of The Crime </h2>
+							<p>
+								Looking at the nature of incidents, the most common type of assault for both men and women is unwanted touching. Comparing the year ending March 2018 to the previous year, there has been an increase in numbers by 0.7%. According to ONS statistician Meghan Elkin, this has been driven by the increase of "unwanted touching" (from 1.4% to 2.1%) and indecent exposure (from 0.4% to 0.8%).
+							</p>
+							<p>
+								Furthermore, Elkin adds: "There has been some fluctuation in the prevalence of sexual assault experienced among adults aged 16 to 59 years over the long-term, but the estimate for the latest year is similar to a decade ago.” According to the statistician it is "too early to say whether this increase is the beginning of an upward trend or another fluctuation in the series, similar to those seen previously”.
+							</p>
+							<h3> <strong>Type of Sexual Offense (%) </strong></h3>
+
+							<div id="sexualoffencetypes"></div>
+							<div class="graphcaption">Data: CSEW | Chart: C3.js</div>
+
+						<p>
+							In terms of groping, unwanted touching, exposure and verbal comments of a sexual nature, women and girls across the UK face harassment in public places on a daily basis. This confirms a nine-month enquiry by the Commons Women and Equalities Committee. The committee found evidence of "relentless” harassment of females on public transport, in bars and clubs, at universities, parks and on streets. In its report the MPs have set out practical measures that government, public transport operators, local authorities and universities should implement.
+						</p>
+						<p>
+							Chair of the committee, Maria Miller, <a href="https://www.independent.co.uk/news/uk/politics/public-sexual-harassment-women-girls-uk-government-policies-parks-streets-women-equalities-committee-a8596541.html">stated in an interview with The Independent</a>:"As with any social harm, prevention of sexual harassment should be the government’s aim. In order to do this, it is necessary to understand why it happens and this may involve confronting deeply uncomfortable truths about British society and the attitudes some men hold towards women."
+						</p>
+						<h2> The Majority of Cases Don’t Get Reported </h2>
+						<p>
+							Looking back, the Harvey Weinstein scandal opened the door for women and men to speak up. What we witnessed after - mostly in America - wasn’t just a trickle but a flood of new accusations against high-profile men. One of the biggest cases last year was the one revolving around Supreme Court Judge Brett Kavanaugh and Christine Blasey Ford. Before the eyes of the world, Blasey Ford gave a testimony about an alleged sexual assault by Kavanaugh at a house party. She was 15 years old at the time. The incredulity with which her account was greeted by some – including President Donald Trump who publicly mocked her – says a lot about how victims of sexual assault are treated in today’s society.
+						</p>
+						<p>
+							Taking this into account, it is less surprising that a majority of victims don’t report their case to the police. CSEW estimates that it is four in five victims.  Therefore, the cases never enter the criminal justice system. The most common reason for not reporting a case to the police is embarrassment, followed by thinking the police couldn’t help and that it would be humiliating. A third of the victims aged between 16 and 59 stated they neither told a person nor an organisation and kept the assault to themselves.
+						</p>
+
+						<h3> <strong>Reasons Why Victims Don't Tell Anyone About Sexual Assault (%)</strong></h3>
+						<div id="reason"></div>
+						<div class="graphcaption">Data: CSEW | Chart: C3.js</div>
+
+
+						<p>
+							Rape Crisis UK has an explanation:  "Through our work, we know victims and survivors often have to deal with feelings of shame and guilt that can make it difficult to talk to anyone about what they've been through or get the help they want and need. Survivors also often fear others will blame them or they won't be believed. Sexual violence myths can reinforce these feelings and fears.”
+						</p>
+						<p>
+							Although, the number of offences recorded remains well below the number of victims, the volume of reports has almost tripled in recent years. According to ONS this has nothing to do with an increase in the number of assaults but reflects the improvements in police recording. "High-profile media coverage of sexual offences, for example, the #metoo movement is likely to have influenced trends in police recorded sexual offences. Victims are thought to be more likely to report both recent and non-recent offences as a result”, says statistician Meghan Elkin.
+						</p>
+						<p>
+							However, even when the case gets reported to the police, it doesn’t mean the perpetrator will be put on trial. Half of all sexual offences recorded by the police don’t proceed further through the criminal justice system due to evidential difficulties, Home Office data shows. These are cases where the police were unable to build a strong enough case, or the victim or offender couldn’t be traced down. Sometimes victims don’t want to take further actions for a number of reasons, such as fear of the process being too distressing or to protect the perpetrator.
+						</p>
+
+						<h3> <strong>Outcomes Assigned to Sexual Offences Recorded By The Police (%)</strong></h3>
+						<div id="outcome"></div>
+						<div class="graphcaption">Data: Home Office | Chart: C3.js</div>
+
+						<p>
+							#metoo has spread awareness around the world. Through newspapers, television, social media, organisations and individuals. The term has been searched for in every country on the planet <a href="https://metoorising.withgoogle.com">Google’s project "Me Too Rising"</a> shows. Despite this, its resonance isn’t the same everywhere.
+						</p>
+						<p>
+							How fast the movement will reshape countries and people’s perception, especially in countries where it’s gained traction more slowly like Japan and South Korea we can’t foresee yet. But change has begun.
+						</p>
+
+						</article>
+
+						<footer id="footer">
+
+							<!-- Icons -->
+							<ul class="icons">
+								<li><a href="https://twitter.com/WordsForEv" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.instagram.com/wordsforeverything_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.linkedin.com/in/leslie-leuenberger-784a36141" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<!-- Menu -->
+							<ul class="menu">
+								<li>&copy; Leslie Leuenberger | 2019</li>
+							</ul>
+						</footer>
+
+
+						<!--  These are all the scripts. For some reason I wasn't able to have them all together maybe because of the head? -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="assets/js/jquery.dropotron.min.js"></script>
+						<script src="assets/js/jquery.scrolly.min.js"></script>
+						<script src="assets/js/jquery.scrollex.min.js"></script>
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
+
+						<link type="text/css" rel="stylesheet" href="js/uikit-2.27.2/css/uikit.almost-flat.min.css" />
+						<script src="js/jquery-2.1.1.min.js"></script>
+						<script src="js/jquery.csv.min.js"></script>
+						<script type="text/javascript" src="js/uikit-2.27.2/js/uikit.min.js"></script>
+
+
+
+						<!--  scripts  for bubble chart -->
+						  <script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+						  <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+						  <script src="index.js"></script>
+
+
+				<script>
+				// PIE CHART---
+				var piechartgender = c3.generate({
+    			bindto: "#piechartgender",
+					data: {
+        // iris data from R
+        columns: [
+            ['women',79.7 ],
+            ['men', 20.3],
+        ],
+        type : 'pie',
+        colors: { 'women': '#5e90bd',
+                    'men': '#2f485e',
+        },
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+			},
+			});
+
+			</script>
+
+
+		<script>
+			// BAR CHART age------
+			var chart = c3.generate({
+					 bindto: '#age',
+					 data: {
+							columns: [
+									['16 - 19', 44],
+									['20 - 24', 24],
+									['25 - 34', 18],
+									['35 - 44', 10],
+									['45 - 51', 3]
+							],
+							type: 'bar',
+							colors: {
+									"16 - 19": '#2f485e',
+									"20 - 24": '#416484',
+									"25 - 34": '#5e90bd',
+									"35 - 44": '#8eb1d0',
+									"45 - 51": '#bed2e4'
+								},
+
+					},
+					axis: {
+						x: {
+							type: 'category',
+							categories: ['Age']
+						},
+					},
+
+			});
+
+
+</script>
+	<script>
+			// BAR CHART reason---------
+			var chartreason = c3.generate({
+				bindto: "#reason",
+				data: {
+					x:'x',
+					columns: [
+					['x', 'Embarrassment','Private matter', 'Did not think anyone would believe them', 'Did not think anyone would help', 'Did not think anyone could help',
+					'Other reason', 'Feared more violence', 'Did not want police involved', 'Did not think anyone would be sympathetic', 'Too trivial','Did not have anyone to tell to'],
+					['Reason', 46, 24, 22, 21, 19, 15, 15, 13, 12, 8]
+					],
+					type: 'bar',
+					colors: {'Reason': '#5e90bd'
+					},
+				},
+				axis: {
+					rotated: true,
+					x: {
+						type: 'category',
+					}
+				},
+				bar: {
+					width: {
+								ratio: 0.8 // this makes bar width 50% of length between ticks
+							}
+						},
+			});
+			chartreason.resize({height:400})
+</script>
+<script>
+			// BAR CHART outcome-----------
+			var chartOutcome = c3.generate({
+				bindto: "#outcome",
+				data: {
+					x:'x',
+					columns: [
+					['x', 'Evidential difficulties', 'Not yet assigned', 'No suspect identified',
+					'Charged/Summonsed', 'Other', 'Prosecution prevented or not public interest', 'Out of court'],
+					['Outcome', 51.3, 19.1, 18.2, 15.5, 6.0, 5.2, 2.8, 1]
+					],
+					type: 'bar',
+
+					colors: {
+							'Outcome': '#5e90bd'
+						},
+
+				},
+				axis: {
+					rotated: true,
+					x: {
+						type: 'category',
+					}
+
+				},
+				bar: {
+					width: {
+								ratio: 0.7 // this makes bar width 50% of length between ticks
+							}
+						},
+
+			});
+			// This is a alternative resize function for the charts that a webdeveloper showed me
+chartOutcome.resize({height:400})
+</script>
+<script>
+			var chartsexualoffencetypes = c3.generate({
+				bindto: '#sexualoffencetypes',
+				data: {
+					columns: [
+					['Women', 7.7, 6.3, 0.4, 18.2, 11.8],
+					['All', 4.1, 3.3, 0.3, 10.7, 6.7],
+					['Men', 0.5,0.4,0.2,3.5,1.7]
+					],
+					type: 'bar',
+					colors: {
+						Women: '#2f485e',
+						Men: '#bed0e8',
+						All: '#5e90bd'
+					},
+					color: function (color, d) {
+								// d will be 'id' when called for legends
+								return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+							},
+						},
+						padding: {
+							bottom: 100,
+						},
+						axis: {
+							x: {
+								type: 'category',
+								categories: ['Rape or penetration including attempts', 'Rape or penetration excluding attempts', 'Causing sexual activity without consent', 'Unwanted touching', 'Indecent exposure']
+							}
+						},
+						bar: {
+							width: {
+										ratio: 0.8 // this makes bar width 50% of length between ticks
+									}
+								}
+							});
+							chartsexualoffencetypes.resize({height:400})
+
+		</script>
+		<script>
+// This is the D3 bubble chart I got from github
+			$(document).ready(function () {
+			  var bubbleChart = new d3.svg.BubbleChart({
+			    supportResponsive: true,
+			    //container: => use @default
+			    size: 600,
+			    //viewBoxSize: => use @default
+			    innerRadius: 600 / 3.5,
+			    //outerRadius: => use @default
+			    radiusMin: 50,
+			    //radiusMax: use @default
+			    //intersectDelta: use @default
+			    //intersectInc: use @default
+			    //circleColor: use @default
+					// Here in the bubble chart I wasn't able to change the colours and I wasn't able to adjust the font-size for "Person of trust/authority"
+					data: {
+			      items: [
+			        {text: "Stranger", count: "15"},
+			        {text: "Partner/Ex-partner", count: "45"},
+			        {text: "Friend", count: "12"},
+			        {text: "Date", count: "9"},
+			        {text: "Acquaintance", count: "9"},
+			        {text: "Colleague", count: "5"},
+			        {text: "Family Member", count: "4"},
+			        {text: "Person of trust/authority", count: "2"},
+			        {text: "Neighbour", count: "1"},
+			      ],
+			      eval: function (item) {return item.count;},
+			      classed: function (item) {return item.text.split(" ").join("");}
+			    },
+			    plugins: [
+
+
+			      // This is code from the bubble chart from Github, it is another function that I temporarily deactivated. I might work on this later. When you click on it a window opens with a message. I didn't see any use for the reader of my article which is why right now it's not in use {
+			      //   name: "central-click",
+			      //   options: {
+			      //     text: "(See more detail)",
+			      //     style: {
+			      //       "font-size": "12px",
+			      //       "font-style": "italic",
+			      //       "font-family": "Source Sans Pro, sans-serif",
+			      //       //"font-weight": "700",
+			      //       "text-anchor": "middle",
+			      //       "fill": "white"
+			      //     },
+			      //     attr: {dy: "65px"},
+			      //     centralClick: function() {
+			      //       alert("Here is more details!!");
+			      //     }
+			      //   }
+			      // },
+			      {
+			        name: "lines",
+			        options: {
+			          format: [
+			            {// Line #0
+			              textField: "count",
+			              classed: {count: true},
+			              style: {
+			                "font-size": "28px",
+			                "font-family": "Source Sans Pro, sans-serif",
+			                "text-anchor": "middle",
+			                fill: "white"
+			              },
+			              attr: {
+			                dy: "0px",
+			                x: function (d) {return d.cx;},
+			                y: function (d) {return d.cy;}
+			              }
+			            },
+			            {// Line #1
+			              textField: "text",
+			              classed: {text: true},
+			              style: {
+			                "font-size": "14px",
+			                "font-family": "Source Sans Pro, sans-serif",
+			                "text-anchor": "middle",
+			                fill: "white"
+			              },
+			              attr: {
+			                dy: "20px",
+			                x: function (d) {return d.cx;},
+			                y: function (d) {return d.cy;}
+			              }
+			            }
+			          ],
+			          centralFormat: [
+			            {// Line #0
+			              style: {"font-size": "50px"},
+			              attr: {}
+			            },
+			            {// Line #1
+			              style: {"font-size": "30px"},
+			              attr: {dy: "40px"}
+			            }
+			          ]
+			        }
+			      }]
+			  });
+			});
+		</script>
+	</body>
+</html>

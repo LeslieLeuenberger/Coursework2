@@ -111,6 +111,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
+		font-size: 500;
 		color: #483949;
 		line-height: 1.25em;
 	}
@@ -1773,7 +1774,7 @@ input, select, textarea {
 		}
 
 	footer {
-		margin: 2.5em 0 0 0;
+		margin: 2em 0 0 0;
 	}
 
 /* Image */
@@ -2197,7 +2198,7 @@ input, select, textarea {
 
 		#header h1 {
 			color: #fff;
-			font-size: 3em;
+			font-size: 5em;
 			line-height: 1em;
 		}
 
@@ -2208,11 +2209,11 @@ input, select, textarea {
 		#header .button {
 			display: inline-block;
 			border-radius: 100%;
-			width: 4.5em;
-			height: 4.5em;
+			width: 4em;
+			height: 4em;
 			line-height: 4.5em;
 			text-align: center;
-			font-size: 1.25em;
+			font-size: 4.5em;
 			padding: 0;
 		}
 
@@ -2475,7 +2476,7 @@ input, select, textarea {
 		#footer .copyright {
 			text-align: center;
 			color: rgba(128, 128, 128, 0.75);
-			font-size: 0.8em;
+			font-size: 10em;
 			cursor: default;
 		}
 
@@ -2802,6 +2803,7 @@ input, select, textarea {
 			ul.menu {
 				height: auto;
 				text-align: center;
+				font-size: 6em;
 			}
 
 				ul.menu li {
@@ -2818,12 +2820,13 @@ input, select, textarea {
 		/* Icons */
 
 			ul.icons {
-				font-size: 1em;
+				font-size: 6em;
 				padding: 0.35em 0.5em 0.35em 0.5em;
 			}
 
 				ul.icons li a {
 					width: 2.25em;
+
 				}
 
 		/* Button */
